@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../app:/usr/src/app
+    working_dir: /usr/src/app
+    ports:
+      - "3000:3000"
+    tty: true         # コンテナを対話モードで保持
+    stdin_open: true  # 標準入力も開いたままにする
+    command: bash       # なにもしないでシェル起動して待機
