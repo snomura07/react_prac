@@ -41,12 +41,12 @@ function App() {
       <ul>
         {toDos.map((todo, index) => (
           <div key={index}>
-            <span style={{textDecoration:todo.isDone ? 'line-through':'none'}}>
-                {todo.id}. {todo.title}
-            </span>
             {!todo.isDone && (
               <button onClick={() => handleDone(index)}> 実施</button>
             )}
+            <span style={{textDecoration:todo.isDone ? 'line-through':'none'}}>
+                {todo.id}. {todo.title}
+            </span>
           </div>
         ))}
       </ul>
